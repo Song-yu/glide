@@ -193,6 +193,11 @@ func VcsVersion(dep *cfg.Dependency) error {
 	}
 
 	ver := dep.Reference
+
+	if ver == "Local" || ver == "local" {
+		return nil
+	}
+
 	// References in Git can begin with a ^ which is similar to semver.
 	// If there is a ^ prefix we assume it's a semver constraint rather than
 	// part of the git/VCS commit id.
