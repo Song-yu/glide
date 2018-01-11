@@ -8,9 +8,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Masterminds/glide/mirrors"
-	"github.com/Masterminds/glide/util"
-	"github.com/Masterminds/vcs"
+	"github.com/Song-yu/glide/mirrors"
+	"github.com/Song-yu/glide/util"
+	"github.com/Song-yu/vcs"
 	"gopkg.in/yaml.v2"
 )
 
@@ -518,6 +518,8 @@ func (d *Dependency) GetRepo(dest string) (vcs.Repo, error) {
 			return vcs.NewHgRepo(remote, dest)
 		case vcs.Bzr:
 			return vcs.NewBzrRepo(remote, dest)
+		case vcs.Local:
+			return vcs.NewLocalRepo(remote, dest)
 		default:
 			return nil, fmt.Errorf("Unknown VCS type %s set for %s", VcsType, d.Name)
 		}
@@ -607,7 +609,7 @@ func stringArrayDeDupe(s []string, items ...string) []string {
 
 func filterVcsType(vcs string) string {
 	switch vcs {
-	case "git", "hg", "bzr", "svn":
+	case "git", "hg", "bzr", "svn" , "local":
 		return vcs
 	case "mercurial":
 		return "hg"
@@ -615,6 +617,8 @@ func filterVcsType(vcs string) string {
 		return "bzr"
 	case "subversion":
 		return "svn"
+	case "Local":
+		return "local"
 	default:
 		return ""
 	}

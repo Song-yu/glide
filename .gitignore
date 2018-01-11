@@ -6,3 +6,13 @@ glide.exe
 dist/
 .DS_Store
 .idea
+vendor/
+!vendor/vendor.json
+.gogradle/
+gradle/
+.gradle/
+log
+settings.gradle
+.gradletasknamecache
+gradlew
+gradlew.bat

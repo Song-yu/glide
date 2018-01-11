@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Masterminds/glide/cfg"
-	"github.com/Masterminds/glide/mirrors"
-	"github.com/Masterminds/glide/msg"
-	gpath "github.com/Masterminds/glide/path"
-	"github.com/Masterminds/glide/util"
+	"github.com/Song-yu/glide/cfg"
+	"github.com/Song-yu/glide/mirrors"
+	"github.com/Song-yu/glide/msg"
+	gpath "github.com/Song-yu/glide/path"
+	"github.com/Song-yu/glide/util"
 )
 
 // EnsureConfig loads and returns a config file.

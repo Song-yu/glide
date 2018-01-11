@@ -5,10 +5,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/Masterminds/glide/cfg"
-	"github.com/Masterminds/glide/msg"
-	gpath "github.com/Masterminds/glide/path"
-	"github.com/Masterminds/glide/util"
+	"github.com/Song-yu/glide/cfg"
+	"github.com/Song-yu/glide/msg"
+	gpath "github.com/Song-yu/glide/path"
+	"github.com/Song-yu/glide/util"
 )
 
 // Has returns true if this dir has a GB-flavored manifest file.

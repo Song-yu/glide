@@ -11,15 +11,15 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Masterminds/glide/cache"
-	"github.com/Masterminds/glide/cfg"
-	"github.com/Masterminds/glide/dependency"
-	"github.com/Masterminds/glide/importer"
-	"github.com/Masterminds/glide/msg"
-	gpath "github.com/Masterminds/glide/path"
-	"github.com/Masterminds/glide/util"
+	"github.com/Song-yu/glide/cache"
+	"github.com/Song-yu/glide/cfg"
+	"github.com/Song-yu/glide/dependency"
+	"github.com/Song-yu/glide/importer"
+	"github.com/Song-yu/glide/msg"
+	gpath "github.com/Song-yu/glide/path"
+	"github.com/Song-yu/glide/util"
 	"github.com/Masterminds/semver"
-	"github.com/Masterminds/vcs"
+	"github.com/Song-yu/vcs"
 	"github.com/codegangsta/cli"
 )
 

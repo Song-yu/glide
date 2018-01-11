@@ -5,11 +5,11 @@ VERSION_INCODE = $(shell perl -ne '/^var version.*"([^"]+)".*$$/ && print "v$$1\
 VERSION_INCHANGELOG = $(shell perl -ne '/^\# Release (\d+(\.\d+)+) / && print "$$1\n"' CHANGELOG.md | head -n1)
 
 build:
-	${GLIDE_GO_EXECUTABLE} build -o glide -ldflags "-X main.version=${VERSION}" glide.go
+	${GLIDE_GO_EXECUTABLE} build -o qglide -ldflags "-X main.version=${VERSION}" glide.go
 
 install: build
 	install -d ${DESTDIR}/usr/local/bin/
-	install -m 755 ./glide ${DESTDIR}/usr/local/bin/glide
+	install -m 755 ./qglide ${DESTDIR}/usr/local/bin/qglide
 
 test:
 	${GLIDE_GO_EXECUTABLE} test . ./gb ./path ./action ./tree ./util ./godep ./godep/strip ./gpm ./cfg ./dependency ./importer ./msg ./repo ./mirrors
@@ -21,7 +21,7 @@ integration-test:
 
 clean:
 	rm -f ./glide.test
-	rm -f ./glide
+	rm -f ./qglide
 	rm -rf ./dist
 
 bootstrap-dist:

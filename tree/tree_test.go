@@ -18,8 +18,8 @@ import (
 
 func TestFindInTree(t *testing.T) {
 	l := list.New()
-	l.PushBack("github.com/Masterminds/glide")
-	l.PushBack("github.com/Masterminds/vcs")
+	l.PushBack("github.com/Song-yu/glide")
+	l.PushBack("github.com/Song-yu/vcs")
 	l.PushBack("github.com/Masterminds/semver")
 
 	f := findInList("foo", l)
@@ -27,7 +27,7 @@ func TestFindInTree(t *testing.T) {
 		t.Error("findInList found true instead of false")
 	}
 
-	f = findInList("github.com/Masterminds/vcs", l)
+	f = findInList("github.com/Song-yu/vcs", l)
 	if f != true {
 		t.Error("findInList found false instead of true")
 	}
